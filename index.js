@@ -24,6 +24,7 @@ function viewCart() {
     cartString="In your cart, you have ";
     for(let c=0;c<cart.length;c++){
       cartString=cartString+cart[c].itemName+" at $"+cart[c].itemPrice;
+<<<<<<< HEAD
       
       //If it's the last item
       if(c==cart.length-1){
@@ -38,6 +39,17 @@ function viewCart() {
       }
       
     }
+=======
+      if(cart.length>2 && c<cart.length-1){
+        cartString=cartString+", ";
+      } else if(c===cart.length-1) {
+        cartString=cartString+" and ";
+      } else if(cart.length===2){
+        cartString=cartString+" and ";
+      }
+    }
+  cartString=cartString+".";
+>>>>>>> e654371429b367204167cba67403c44c677fcd85
   } else {
     cartString="Your shopping cart is empty.";
   }
